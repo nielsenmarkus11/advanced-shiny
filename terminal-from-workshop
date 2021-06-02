@@ -1,0 +1,70 @@
+castell@ip-10-8-10-244:~/advanced-shiny$ git checkout -b  main
+Switched to a new branch 'main'
+castell@ip-10-8-10-244:~/advanced-shiny$ git remote add alt https://github.com/colearendt/shinytest-example.git
+castell@ip-10-8-10-244:~/advanced-shiny$ git fetch alt
+remote: Enumerating objects: 455, done.
+remote: Counting objects: 100% (72/72), done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 455 (delta 42), reused 61 (delta 42), pack-reused 383
+Receiving objects: 100% (455/455), 4.20 MiB | 28.30 MiB/s, done.
+Resolving deltas: 100% (225/225), done.
+From https://github.com/colearendt/shinytest-example
+ * [new branch]      deploy-diff-connect -> alt/deploy-diff-connect
+ * [new branch]      main                -> alt/main
+castell@ip-10-8-10-244:~/advanced-shiny$ git push main
+error: src refspec refs/heads/main does not match any.
+error: failed to push some refs to 'main'
+castell@ip-10-8-10-244:~/advanced-shiny$ git push --set-upstream origin main
+error: src refspec main does not match any.
+error: failed to push some refs to 'https://github.com/nielsenmarkus11/advanced-shiny.git'
+castell@ip-10-8-10-244:~/advanced-shiny$ rm .gitignore
+castell@ip-10-8-10-244:~/advanced-shiny$ rm -f shinytsets-exampel.Rproj
+castell@ip-10-8-10-244:~/advanced-shiny$ git merge alt/main
+castell@ip-10-8-10-244:~/advanced-shiny$ git rm shinytest-example.Rproj
+rm 'shinytest-example.Rproj'
+castell@ip-10-8-10-244:~/advanced-shiny$ git push --set-upstream origin main
+Username for 'https://github.com': nielsenmarkus11
+Password for 'https://nielsenmarkus11@github.com': 
+Counting objects: 432, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (184/184), done.
+Writing objects: 100% (432/432), 4.20 MiB | 13.74 MiB/s, done.
+Total 432 (delta 208), reused 422 (delta 202)
+remote: Resolving deltas: 100% (208/208), done.
+To https://github.com/nielsenmarkus11/advanced-shiny.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+castell@ip-10-8-10-244:~/advanced-shiny$ gti commit
+
+Command 'gti' not found, did you mean:
+
+  command 'gtv' from deb smpeg-gtv
+  command 'gt5' from deb gt5
+  command 'gtg' from deb gtg
+  command 'gsi' from deb gambc
+  command 'gri' from deb gri
+  command 'ti' from deb ticgit
+  command 'gt' from deb genometools
+  command 'gmi' from deb gmailieer
+  command 'gtf' from deb xserver-xorg-core
+  command 'bti' from deb bti
+  command 'ghi' from deb ghi
+  command 'git' from deb git
+  command 'gli' from deb ruby-gli
+
+Try: apt install <deb name>
+
+castell@ip-10-8-10-244:~/advanced-shiny$ git commit -m "Remoev rpoj file"
+[main 2440b91] Remoev rpoj file
+ 1 file changed, 16 deletions(-)
+ delete mode 100644 shinytest-example.Rproj
+castell@ip-10-8-10-244:~/advanced-shiny$ git push origin main
+Counting objects: 2, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 237 bytes | 237.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nielsenmarkus11/advanced-shiny.git
+   6cab124..2440b91  main -> main
+castell@ip-10-8-10-244:~/advanced-shiny$ 
