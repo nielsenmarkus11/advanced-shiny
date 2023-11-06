@@ -7,5 +7,6 @@ renv::restore()
 
 usethis::edit_r_environ() # Opens .Renviron file for project
 
+
 shinytest::installDependencies()
 shinytest::testApp(suffix = "linux")
